@@ -7,9 +7,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'c4.wallpaperflare.com',
+        pathname: '/**',
       },
     ],
   },
 };
+
 
 export default nextConfig;
