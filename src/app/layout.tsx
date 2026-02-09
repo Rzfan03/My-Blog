@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rzfan03 Blog",
+  title: "Rzfan03/Blog",
   description: "Blog pribadi tentang pemrograman dan teknologi.",
 };
 

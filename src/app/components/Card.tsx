@@ -1,14 +1,14 @@
 import Image from "next/image"
 
-export default function Card({title, image, desc, author, date}: {title: string, image: string, desc: string, author: string, date: string}) {
+export default function Card({title, desc, author, date, slug}: {title: string, image: string, desc: string, author: string, date: string, slug: string}) {
     return (
-        <div className="bg-gray-950 border rounded-lg border-gray-900 flex flex-col">
-            <Image src={image} alt={title} width={800} height={200} className="mt-8 mb-12 mx-auto rounded-lg" />
-            <h1>{title}</h1>
-            <p>{desc}</p>
-            <p>{author}</p>
-            <p>{date}</p>
-            <h1>{title}</h1>
+        <div className="border-b border-zinc-800 hover:scale-103 transition-all w-full p-5 flex items-start flex-col">
+            <h1><a className="text-lg" href={`/blog/${slug}`}>{title}</a></h1>
+            <p className="text-sm text-zinc-300">{desc}</p>
+        <div className="flex items-center gap-4 mt-2">
+          <p className="text-sm text-zinc-500">Author : {author}</p>
+          <p className="text-sm text-zinc-300">{date}</p>
+            </div>
         </div>
     )
 }
