@@ -5,7 +5,7 @@ import { useUser, UserAvatar } from "@clerk/nextjs"
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 
-export default function CommentInput({ postSlug }: { postSlug: string }) {
+export default function CommentInput() {
   const { user } = useUser()
   const [content, setContent] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)

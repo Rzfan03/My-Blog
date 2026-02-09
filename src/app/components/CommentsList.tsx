@@ -1,8 +1,5 @@
 "use client"
 
-import { formatDistanceToNow } from 'date-fns' // Optional: buat "2 mins ago"
-import { id } from 'date-fns/locale' // Optional: buat bahasa Indo
-
 interface Comment {
   id: string | number
   username: string
