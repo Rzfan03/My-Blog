@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Sembunyikan untuk Chrome, Safari, dan Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sembunyikan untuk IE, Edge, dan Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE dan Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

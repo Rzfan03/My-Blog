@@ -1,6 +1,7 @@
 import { getPublishedPosts } from '../lib/posts';
 import Card from './components/Card';
 import GithubButton from './components/githubButton';
+import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from '@clerk/nextjs';
 
 export default function BlogPage() {
   const posts = getPublishedPosts();
@@ -12,7 +13,19 @@ export default function BlogPage() {
           <h1 className="text-2xl font-mono text-zinc-900 dark:text-white">
             Rzfan03/Blog
           </h1>
-          <GithubButton/>
+          <div className='flex gap-3 items-center'>
+            <GithubButton />
+            <SignedOut>
+              <SignInButton mode='modal'>
+                <button className='text-white border-2 border-zinc-800 px-3 py-1.5 rounded-lg'>Login</button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <SignOutButton>
+                <UserButton/>
+              </SignOutButton>
+            </SignedIn>
+         </div>
         </div>
         
         <div className="flex justify-center items-center flex-col gap-3">
