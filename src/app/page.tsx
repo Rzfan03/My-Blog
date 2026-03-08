@@ -11,20 +11,10 @@ export default function BlogPage() {
       <div className="container mx-auto px-4 py-8">
         <div className='flex justify-between mb-8 items-center'>
           <h1 className="text-2xl font-mono text-zinc-900 dark:text-white">
-            Rzfan03/Blog
+            Blog/Rzfan03
           </h1>
           <div className='flex gap-3 items-center'>
             <GithubButton />
-            <SignedOut>
-              <SignInButton mode='modal'>
-                <button className='text-white border-2 border-zinc-800 px-3 py-1.5 rounded-lg'>Login</button>
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <SignOutButton>
-                <UserButton/>
-              </SignOutButton>
-            </SignedIn>
          </div>
         </div>
         
