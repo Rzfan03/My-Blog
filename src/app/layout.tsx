@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rzfan03/Blog",
   description: "Blog pribadi tentang pemrograman dan teknologi.",
+  verification: {
+    google: "GM7nwkL1De6nDTqyLvcNws0aBA97tgP-SCoCjAFu628",
+  },
 };
 
 export default function RootLayout({
@@ -25,16 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{
-      theme: dark,
-    }}>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider appearance={{ theme: dark }}>
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          {children}
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
